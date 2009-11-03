@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {unclose = id; uncloseTab = id; }; 
+            CLASS = JFSafariPlugin; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fileMenuAdditions = NSMenu; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

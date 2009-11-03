@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IFPkgDescriptionDescription</key>
+	<string>ForgetMeNot is a SIMBL plugin for Safari which saves the URLs you were visiting when Safari quits, and reloads those same websites when you restart Safari.</string>
+	<key>IFPkgDescriptionTitle</key>
+	<string>ForgetMeNot</string>
+</dict>
+</plist>

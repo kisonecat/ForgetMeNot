@@ -1,0 +1,12 @@
+#! /bin/bash
+# xcodebuild -project ForgetMeNot.xcodeproj -configuration Release clean build
+rm -rf image
+mkdir image
+cp -R installer/*.pkg image/
+cp -R installer/readme.pdf image/ForgetMeNot-ReadMe.pdf
+cp -R installer/SIMBL-ReadMe.html image/SIMBL-ReadMe.html
+cp -R installer/Installer\ Background.tif image/background.tif
+cp -R DS_Store image/.DS_Store
+./pkg-dmg --source image --target forgetmenot.dmg --attribute V:background.tif --volname "ForgetMeNot" --icon ForgetMeNot.icns
+scp forgetmenot.dmg jim@kisonecat.com:/var/www/kisonecat2/downloads/forgetmenot.dmg
+

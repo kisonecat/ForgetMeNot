@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B026FB20A90184200B5FA03 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B026FB10A90184200B5FA03 /* AppController.m */; };
+		7B1875FA0AA7DE4000943150 /* ForgetMeNotPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1875F90AA7DE4000943150 /* ForgetMeNotPreferences.m */; };
+		7B1876080AA7DE8800943150 /* NSPreferences+ForgetMeNot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1876070AA7DE8800943150 /* NSPreferences+ForgetMeNot.m */; };
+		7B18764C0AA7E20B00943150 /* Forget Me Not.tif in Resources */ = {isa = PBXBuildFile; fileRef = 7B18764B0AA7E20B00943150 /* Forget Me Not.tif */; };
+		7B51F8970A99F8E1004DD610 /* BrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51F8960A99F8E1004DD610 /* BrowserWindowController.m */; };
+		7B78D4DD0AA8D1C900CE9AE7 /* NSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B78D4DC0AA8D1C900CE9AE7 /* NSApplication.m */; };
+		7B7B48FE0AA8006900D511F4 /* ForgetMeNotPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7B48FD0AA8006900D511F4 /* ForgetMeNotPreferences.nib */; };
+		7B7B49040AA8009300D511F4 /* MenuAdditions.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7B49030AA8009300D511F4 /* MenuAdditions.nib */; };
+		7B7C7FD80A8FEBBA00C5B4EC /* JFSafariPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7FD70A8FEBBA00C5B4EC /* JFSafariPlugin.m */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA420018CDE011CA2923 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		014CEA430018CDE011CA2923 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* ForgetMeNot_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetMeNot_Prefix.pch; sourceTree = "<group>"; };
+		7B026FB00A90184200B5FA03 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		7B026FB10A90184200B5FA03 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		7B1875E60AA7DD0E00943150 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ForgetMeNotPreferences.nib; sourceTree = "<group>"; };
+		7B1875EE0AA7DDBA00943150 /* NSPreferenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPreferenceModule.h; sourceTree = "<group>"; };
+		7B1875F80AA7DE4000943150 /* ForgetMeNotPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetMeNotPreferences.h; sourceTree = "<group>"; };
+		7B1875F90AA7DE4000943150 /* ForgetMeNotPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetMeNotPreferences.m; sourceTree = "<group>"; };
+		7B1876060AA7DE8800943150 /* NSPreferences+ForgetMeNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPreferences+ForgetMeNot.h"; sourceTree = "<group>"; };
+		7B1876070AA7DE8800943150 /* NSPreferences+ForgetMeNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPreferences+ForgetMeNot.m"; sourceTree = "<group>"; };
+		7B18764B0AA7E20B00943150 /* Forget Me Not.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Forget Me Not.tif"; sourceTree = "<group>"; };
+		7B51F8950A99F8E1004DD610 /* BrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserWindowController.h; sourceTree = "<group>"; };
+		7B51F8960A99F8E1004DD610 /* BrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWindowController.m; sourceTree = "<group>"; };
+		7B78D4DB0AA8D1C900CE9AE7 /* NSApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSApplication.h; sourceTree = "<group>"; };
+		7B78D4DC0AA8D1C900CE9AE7 /* NSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSApplication.m; sourceTree = "<group>"; };
+		7B7B488D0AA7F91800D511F4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MenuAdditions.nib; sourceTree = "<group>"; };
+		7B7B48FF0AA8007B00D511F4 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/ForgetMeNotPreferences.nib; sourceTree = "<group>"; };
+		7B7B49050AA8009E00D511F4 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MenuAdditions.nib; sourceTree = "<group>"; };
+		7B7B490A0AA802D800D511F4 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ForgetMeNotPreferences.nib; sourceTree = "<group>"; };
+		7B7B490D0AA802E600D511F4 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MenuAdditions.nib; sourceTree = "<group>"; };
+		7B7C7FD60A8FEBBA00C5B4EC /* JFSafariPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSafariPlugin.h; sourceTree = "<group>"; };
+		7B7C7FD70A8FEBBA00C5B4EC /* JFSafariPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSafariPlugin.m; sourceTree = "<group>"; };
+		7BBE1ECF0A8FED85003E2F8C /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Safari.h; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* ForgetMeNot.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForgetMeNot.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* ForgetMeNot */ = {
+			isa = PBXGroup;
+			children = (
+				7B026FB00A90184200B5FA03 /* AppController.h */,
+				7B026FB10A90184200B5FA03 /* AppController.m */,
+				7B78D4DB0AA8D1C900CE9AE7 /* NSApplication.h */,
+				7B78D4DC0AA8D1C900CE9AE7 /* NSApplication.m */,
+				7B1875F80AA7DE4000943150 /* ForgetMeNotPreferences.h */,
+				7B1875F90AA7DE4000943150 /* ForgetMeNotPreferences.m */,
+				7B1876060AA7DE8800943150 /* NSPreferences+ForgetMeNot.h */,
+				7B1876070AA7DE8800943150 /* NSPreferences+ForgetMeNot.m */,
+				7B51F8950A99F8E1004DD610 /* BrowserWindowController.h */,
+				7B51F8960A99F8E1004DD610 /* BrowserWindowController.m */,
+				7B7C7FD60A8FEBBA00C5B4EC /* JFSafariPlugin.h */,
+				7B7C7FD70A8FEBBA00C5B4EC /* JFSafariPlugin.m */,
+				7B1875EE0AA7DDBA00943150 /* NSPreferenceModule.h */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+				7B18764B0AA7E20B00943150 /* Forget Me Not.tif */,
+			);
+			name = ForgetMeNot;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B7B49030AA8009300D511F4 /* MenuAdditions.nib */,
+				7B7B48FD0AA8006900D511F4 /* ForgetMeNotPreferences.nib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* ForgetMeNot.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* ForgetMeNot_Prefix.pch */,
+				7BBE1ECF0A8FED85003E2F8C /* Safari.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* ForgetMeNot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "ForgetMeNot" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = ForgetMeNot;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = ForgetMeNot;
+			productReference = 8D5B49B6048680CD000E48DA /* ForgetMeNot.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "ForgetMeNot" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA420018CDE011CA2923 /* Debug */,
+				014CEA430018CDE011CA2923 /* Release */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* ForgetMeNot */;
+			projectDirPath = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* ForgetMeNot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				7B7B48FE0AA8006900D511F4 /* ForgetMeNotPreferences.nib in Resources */,
+				7B18764C0AA7E20B00943150 /* Forget Me Not.tif in Resources */,
+				7B7B49040AA8009300D511F4 /* MenuAdditions.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7C7FD80A8FEBBA00C5B4EC /* JFSafariPlugin.m in Sources */,
+				7B026FB20A90184200B5FA03 /* AppController.m in Sources */,
+				7B51F8970A99F8E1004DD610 /* BrowserWindowController.m in Sources */,
+				7B1875FA0AA7DE4000943150 /* ForgetMeNotPreferences.m in Sources */,
+				7B1876080AA7DE8800943150 /* NSPreferences+ForgetMeNot.m in Sources */,
+				7B78D4DD0AA8D1C900CE9AE7 /* NSApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B7B48FD0AA8006900D511F4 /* ForgetMeNotPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B1875E60AA7DD0E00943150 /* English */,
+				7B7B48FF0AA8007B00D511F4 /* German */,
+				7B7B490A0AA802D800D511F4 /* French */,
+			);
+			name = ForgetMeNotPreferences.nib;
+			sourceTree = "<group>";
+		};
+		7B7B49030AA8009300D511F4 /* MenuAdditions.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B7B488D0AA7F91800D511F4 /* English */,
+				7B7B49050AA8009E00D511F4 /* German */,
+				7B7B490D0AA802E600D511F4 /* French */,
+			);
+			name = MenuAdditions.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ForgetMeNot_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = ForgetMeNot;
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ForgetMeNot_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = ForgetMeNot;
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "ForgetMeNot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "ForgetMeNot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

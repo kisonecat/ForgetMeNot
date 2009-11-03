@@ -1,0 +1,1 @@
+xcodebuild -project ForgetMeNot.xcodeproj -configuration Universal clean build

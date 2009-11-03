@@ -1,0 +1,17 @@
+Title ForgetMeNot
+Version 
+Description ForgetMeNot is a SIMBL plugin for Safari which saves the URLs you were visiting when Safari quits, and reloads those same websites when you restart Safari.
+DefaultLocation /Library/Application Support/SIMBL/Plugins
+DeleteWarning 
+
+### Package Flags
+
+NeedsAuthorization YES
+Required NO
+Relocatable NO
+RequiresReboot NO
+UseUserMask NO
+OverwritePermissions NO
+InstallFat NO
+RootVolumeOnly NO
+OnlyUpdateInstalledLanguages NO

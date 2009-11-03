@@ -1,0 +1,4 @@
+nibtool -d German.lproj/MenuAdditions.strings English.lproj/MenuAdditions.nib -W German.lproj/MenuAdditions.nib
+nibtool -d French.lproj/MenuAdditions.strings English.lproj/MenuAdditions.nib -W French.lproj/MenuAdditions.nib
+nibtool -d German.lproj/ForgetMeNotPreferences.strings English.lproj/ForgetMeNotPreferences.nib -W German.lproj/ForgetMeNotPreferences.nib
+nibtool -d French.lproj/ForgetMeNotPreferences.strings English.lproj/ForgetMeNotPreferences.nib -W French.lproj/ForgetMeNotPreferences.nib
