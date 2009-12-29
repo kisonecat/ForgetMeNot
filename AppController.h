@@ -20,7 +20,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Safari.h"
 
-@interface AppController (JFSwizzle)
+@interface ForgetMeNotAppController : NSObject
+
++ (void) ForgetMeNot_load;
 
 -(void)_safari_applicationWillTerminate:(id)fp8;
 -(void)_safari_applicationDidFinishLaunching:(id)fp8;

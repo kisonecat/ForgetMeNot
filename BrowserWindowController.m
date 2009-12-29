@@ -17,17 +17,55 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include <objc/objc.h>
+#include <objc/runtime.h>
+
 #import "BrowserWindowController.h"
 #import <WebKit/WebKit.h>
 #import "JFSafariPlugin.h"
 
-@implementation BrowserWindowController (JFSwizzle)
+@implementation ForgetMeNotBrowserWindowController
+
++ (void) ForgetMeNot_load
+{
+	Method old, new;
+	Class self_class = [self class];
+    Class safari_class = [objc_getClass("BrowserWindowController") class];
+    //NSLog(@"%@\n", objc_getClass("BrowserWindowController"));
+    
+    class_addMethod(safari_class, @selector(openedTabs),
+                    class_getMethodImplementation(self_class, @selector(openedTabs)),
+                    "@@:");
+
+	class_addMethod(safari_class, @selector(_forgetMeNot_windowShouldClose:),
+                    class_getMethodImplementation(self_class, @selector(windowShouldClose:)),
+                    "l@:@");
+	
+	old = class_getInstanceMethod(safari_class, @selector(windowShouldClose:));
+	new = class_getInstanceMethod(safari_class, @selector(_forgetMeNot_windowShouldClose:));
+	method_exchangeImplementations(old, new);
+
+	
+	class_addMethod(safari_class, @selector(newTabWithURL:),
+                    class_getMethodImplementation(self_class, @selector(newTabWithURL:)),
+                    "v@:@");
+
+	class_addMethod(safari_class, @selector(_forgetMeNot_closeTab:),
+                    class_getMethodImplementation(self_class, @selector(closeTab:)),
+                    "l@:@");
+	
+	old = class_getInstanceMethod(safari_class, @selector(closeTab:));
+	new = class_getInstanceMethod(safari_class, @selector(_forgetMeNot_closeTab:));
+	method_exchangeImplementations(old, new);
+	
+	
+}
 
 /* There will be some warnings when we compile this; we are missing the
 implementations of _safari_... */
 
 /* Answer the array of URLs loaded in the tabs of this window */
-- (NSArray*)_jf_openedTabs
+- (NSArray*)openedTabs
 {
 	NSMutableArray* tabs = [NSMutableArray array]; // for saving tabs
 	
@@ -46,13 +84,13 @@ implementations of _safari_... */
 }	
 		
 /* Swizzled windowShouldClose: */
-- (BOOL)_jf_windowShouldClose:(id)sender
+- (BOOL)windowShouldClose:(id)sender
 {
 	// If Safari decides that we are about to close...
-	if ([self _safari_windowShouldClose: sender]) {
+	if ([self _forgetMeNot_windowShouldClose: sender]) {
 		// Save the opened tabs...
 		[[JFSafariPlugin sharedInstance] rememberClosedWindow:
-			[self _jf_openedTabs]];
+			[self openedTabs]];
 		
 		// and close the window.
 		return YES;
@@ -61,15 +99,7 @@ implementations of _safari_... */
 	return NO;
 }
 
-- (void)_jf_windowWillClose:(id)sender
-{
-	[self _safari_windowWillClose: sender];
-	
-	return;
-}
-
-
--(void)_jf_newTabWithURL:(NSURL*)url
+-(void)newTabWithURL:(NSURL*)url
 {
 	// Create a blank tab
 	WebView* webView = [self createTab];
@@ -108,24 +138,22 @@ implementations of _safari_... */
 }
 	
 /* Swizzled closeTab: */
-- (BOOL)_jf_closeTab:(id)tab
+- (BOOL)closeTab:(id)tab
 {
 	// we can unclose the tab by creating a new tab with the current URL
 	NSUndoManager* undoManager = [[self document] undoManager];
-	
-	// NSLog( @"tab = %@\n", tab );
 	
 	[undoManager beginUndoGrouping];
 	[undoManager setActionName:
 		[[JFSafariPlugin sharedInstance] localizedCloseTabString]];
 	[undoManager registerUndoWithTarget:self
-							   selector:@selector(_jf_newTabWithURL:)
+							   selector:@selector(newTabWithURL:)
 								 object:[[tab webView] currentURL]]; // [tab view] replaced with [tab webView]
 	
 	[undoManager endUndoGrouping];
 	
 	// swizzle the tab closed
-	return [self _safari_closeTab: tab];
+	return [self _forgetMeNot_closeTab: tab];
 }
 
 @end

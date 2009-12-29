@@ -9,9 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import "NSPreferenceModule.h"
 
+#ifdef __OBJC2__
+@interface NSPreferences (NSPreferences_ForgetMeNot)
+#else
 @interface NSPreferences_ForgetMeNot : NSPreferences {
-
 }
+#endif
 
 + (void) load;
 - (NSWindow*) window;

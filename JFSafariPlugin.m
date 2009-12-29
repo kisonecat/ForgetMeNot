@@ -22,29 +22,6 @@
 #import "BrowserWindowController.h"
 #import <WebKit/WebKit.h>
 
-/* Code for doing method swizzling. */
-
-typedef struct objc_method *Method;
-
-struct objc_method {
-  SEL method_name;
-  char *method_types;
-  IMP method_imp;
-};
-
-BOOL JFRenameSelector(Class _class, SEL _oldSelector, SEL _newSelector)
-{
-        Method method = nil;
-
-        // Look for the methods
-        method = (Method)class_getInstanceMethod(_class, _oldSelector);
-        if (method == nil)
-                return NO;
-
-		// Point the method to a new function
-        method->method_name = _newSelector;
-        return YES;
-}
 
 @implementation JFSafariPlugin
 
@@ -54,39 +31,10 @@ BOOL JFRenameSelector(Class _class, SEL _oldSelector, SEL _newSelector)
 + (void) load
 {
 	NSLog(@"ForgetMeNot installed.");
-		
-	// Exchange Safari's applicationDidFinishLaunching: with ours.
-    JFRenameSelector([AppController class], @selector(applicationDidFinishLaunching:), @selector (_safari_applicationDidFinishLaunching:));
-	JFRenameSelector([AppController class], @selector(_jf_applicationDidFinishLaunching:), @selector(applicationDidFinishLaunching:));
-
-	// Exchange Safari's applicationWillTerminate: with ours.
-	JFRenameSelector([AppController class], @selector(applicationWillTerminate:), @selector (_safari_applicationWillTerminate:));
-	JFRenameSelector([AppController class], @selector(_jf_applicationWillTerminate:), @selector(applicationWillTerminate:));
-
-	// Exchange Safari's validateUserInterfaceItem: with ours.
-	JFRenameSelector([AppController class], @selector(validateUserInterfaceItem:), @selector (_safari_validateUserInterfaceItem:));
-	JFRenameSelector([AppController class], @selector(_jf_validateUserInterfaceItem:), @selector(validateUserInterfaceItem:));
-
-	// Exchange Safari's application:openFile: with ours.
-	JFRenameSelector([AppController class], @selector(application:openFile:), @selector (_safari_application:openFile:));
-	JFRenameSelector([AppController class], @selector(_jf_application:openFile:), @selector(application:openFile:));	
-
-	// Exchange Safari's handleURLEvent:withReplyEvent: with ours.
-	JFRenameSelector([AppController class], @selector(handleURLEvent:withReplyEvent:), @selector (_safari_handleURLEvent:withReplyEvent:));
-	JFRenameSelector([AppController class], @selector(_jf_handleURLEvent:withReplyEvent:), @selector(handleURLEvent:withReplyEvent:));	
 	
-	// Exchange Safari's windowShouldClose: with ours.
-    JFRenameSelector([BrowserWindowController class], @selector(windowShouldClose:), @selector (_safari_windowShouldClose:));
-	JFRenameSelector([BrowserWindowController class], @selector(_jf_windowShouldClose:), @selector(windowShouldClose:));	
+	[ForgetMeNotBrowserWindowController ForgetMeNot_load];
+	[ForgetMeNotAppController ForgetMeNot_load];
 
-	// Exchange Safari's windowWillClose: with ours.
-    JFRenameSelector([BrowserWindowController class], @selector(windowWillClose:), @selector (_safari_windowWillClose:));
-	JFRenameSelector([BrowserWindowController class], @selector(_jf_windowWillClose:), @selector(windowWillClose:));		
-	
-	// Exchange Safari's windowShouldClose: with ours.
-    JFRenameSelector([BrowserWindowController class], @selector(closeTab:), @selector (_safari_closeTab:));
-	JFRenameSelector([BrowserWindowController class], @selector(_jf_closeTab:), @selector(closeTab:));	
-	
 	// Add menu item "Unclose" to the File menu, underneath "Close Window"
 	[NSBundle loadNibNamed:@"MenuAdditions" owner:[JFSafariPlugin sharedInstance]];
 	

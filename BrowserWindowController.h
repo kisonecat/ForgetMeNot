@@ -20,7 +20,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Safari.h"
 
-@interface BrowserWindowController (JFSwizzle)
+@interface ForgetMeNotBrowserWindowController : NSObject
+
++ (void) ForgetMeNot_load;
 
 - (NSArray*)_jf_openedTabs;
 
